@@ -2,7 +2,7 @@ import Dashboard from "@/modules/dashboard";
 import React from "react";
 
 const Page: React.FC = () => {
-  return <div><Dashboard/></div>;
+  return <Dashboard />;
 };
 
 export default Page;

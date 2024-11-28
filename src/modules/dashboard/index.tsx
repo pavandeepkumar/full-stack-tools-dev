@@ -11,6 +11,7 @@ const Dashboard = () => {
     search: "dashboard",
   };
   const { data: dashboardListData } = useGetDashboardList(params);
+  console.log("dashboardListData", dashboardListData)
   // Update the user info
   const updateUserInfo = () => {
     setUserData({

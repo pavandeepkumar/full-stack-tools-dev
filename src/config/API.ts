@@ -7,11 +7,10 @@ interface APIPaths {
         getById?: string,
     }
 }
-
 const API: APIPaths = {
     dashboard: {
         add: 'dashboard/add',
-        list: 'dashboard/list',
+        list: 'users',
         update: 'dashboard/update',
         delete: 'dashboard/delete',
         getById: 'dashboard/get',

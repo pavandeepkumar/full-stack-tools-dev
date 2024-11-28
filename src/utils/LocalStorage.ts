@@ -20,6 +20,7 @@ const getItem = <T>(key: string): T | null => {
     // Attempt to parse the data as JSON and return it.
     return JSON.parse(data) as T;
   } catch (err) {
+    console.log("Error",err)
     // If parsing fails, return the raw data as a fallback.
     return data as unknown as T;
   }

@@ -1,4 +1,4 @@
-const API_ENDPOINT = ""
+const API_ENDPOINT = "https://dummyjson.com/"
 
 
 export {
