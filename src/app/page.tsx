@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { LoginForm } from "@/components/login-form";
 
 export default function Home() {
   return (
     <>
-      <Button variant={"outline"}>Click Me</Button>
+      <div className="flex h-screen w-full items-center justify-center px-4">
+        <LoginForm />
+      </div>
     </>
   );
 }

@@ -8,7 +8,7 @@ export const paramsToQueryString = (
           params[key].toString()
         )}&`;
       });
-      queryString = queryString.slice(0, -1); // Remove trailing '&'
+      queryString = queryString.slice(0, -1);
       return queryString;
     }
     return "";

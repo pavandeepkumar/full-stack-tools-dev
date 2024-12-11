@@ -1,9 +1,8 @@
+import { TanstackProviders } from "@/providers";
+import { ThemeProvider } from "@/providers/ThemeProviders";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.css";
-import { TanstackProviders } from "@/providers";
-import LayoutProvider from "@/components/layout";
-import { ThemeProvider } from "@/providers/ThemeProviders";
 
 const geistSans = localFont({
   src: "../../public/fonts/GeistMonoVF.woff",
@@ -31,17 +30,19 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+
+          themes={["light", "dark"]}
           enableSystem
           disableTransitionOnChange
         >
           <TanstackProviders>
-            <LayoutProvider>
-              {children}
-            </LayoutProvider>
+            {/* <LayoutProvider> */}
+            {children}
+            {/* </LayoutProvider> */}
           </TanstackProviders>
         </ThemeProvider>
       </body>

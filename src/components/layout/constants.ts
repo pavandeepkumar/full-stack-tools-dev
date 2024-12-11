@@ -1,5 +1,10 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
-const sideMenuItems = [
+import { Calendar, Home, Inbox, Search, Settings, Sparkles } from "lucide-react"
+interface SidebarMenuItem {
+    title: string
+    url: string
+    icon: React.ElementType
+}
+const sideMenuItems:SidebarMenuItem[] = [
     {
         title: "Home",
         url: "#",
@@ -25,6 +30,11 @@ const sideMenuItems = [
         url: "#",
         icon: Settings,
     },
+    {
+        title: "Ask AI",
+        url: "#",
+        icon: Sparkles,
+    }
 ]
 
 export default sideMenuItems
