@@ -21,7 +21,7 @@ export const authOptions: NextAuthOptions = {
         email: { label: "Email", type: "text" },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials, _req) {
         // Replace with your API call
         if (!credentials) throw new Error("Credentials are required.");
         const { email, password } = credentials;
