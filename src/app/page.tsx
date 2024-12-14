@@ -1,11 +1,4 @@
-import { LoginForm } from "@/components/login-form";
-
+import { LoginPage } from "@/modules/auth";
 export default function Home() {
-  return (
-    <>
-      <div className="flex h-screen w-full items-center justify-center px-4">
-        <LoginForm />
-      </div>
-    </>
-  );
+  return <LoginPage />;
 }

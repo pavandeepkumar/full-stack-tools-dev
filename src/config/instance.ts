@@ -1,6 +1,5 @@
-// services/api.ts
-import { API_ENDPOINT } from "@/constants";
 import axios, { AxiosError, AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from "axios";
+import { API_ENDPOINT } from "@/constants";
 
 
 const instance: AxiosInstance = axios.create({

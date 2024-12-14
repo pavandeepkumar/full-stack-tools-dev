@@ -6,7 +6,8 @@ export const useGetDashboardList = (params: IGetDashboardList) => {
     return useQuery({
         queryKey: ["dashboard", params],
         queryFn: () => getDashboardListApi(params),
-        retry: 0,
-        refetchOnWindowFocus: false,
+        retry: 3,
+        staleTime: 1000 * 60 * 5,
+        placeholderData: (previousData) => previousData,
     });
 };

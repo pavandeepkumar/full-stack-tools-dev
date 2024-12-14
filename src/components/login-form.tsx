@@ -1,25 +1,31 @@
-"use client"
-import Link from "next/link"
+"use client";
+// DEFINE ALL EXTERNAL IMPORTS
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-import { Button } from "@/components/ui/button"
+// DEFINE ALL INTERNAL IMPORTS
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { useRouter } from "next/navigation"
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
+// DEFINE MAIN FUNCTION AND EXPORT
 export function LoginForm() {
-  const router=useRouter()
+  // DEFINE ALL STATE HERE
+  const router = useRouter();
+
+  // DEFINE ALL THE FUNCTIONS HERE
   const handleLogin = () => {
     // TODO: Implement sign-in logic
-    console.log("Signing in...")
-    router.push("/dashboard")
-}
+    router.push("/dashboard");
+  };
+  // DEFINE MAIN THE RETURN HERE
   return (
     <Card className="mx-auto w-full max-w-sm border-none">
       <CardHeader>
@@ -63,5 +69,5 @@ export function LoginForm() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

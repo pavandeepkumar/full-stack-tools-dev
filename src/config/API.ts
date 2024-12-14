@@ -1,13 +1,4 @@
-interface APIPaths {
-    dashboard: {
-        list?: string,
-        add?: string,
-        update?: string,
-        delete?: string,
-        getById?: string,
-    }
-}
-const API: APIPaths = {
+const API = {
     dashboard: {
         add: 'dashboard/add',
         list: 'users',
@@ -17,4 +8,3 @@ const API: APIPaths = {
     }
 }
 export default Object.freeze(API);
-

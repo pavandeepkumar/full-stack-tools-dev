@@ -1,6 +1,9 @@
 "use client"
+// DEFINE ALL EXTERNAL IMPORTS
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
+// DEFINE ALL LOCAL IMPORTS
 import { Button } from "@/components/ui/button"
 import {
     Card,
@@ -11,15 +14,19 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { useRouter } from "next/navigation"
 
+// DEFINE MAIN FUNCTION AND EXPORT
 export function SignInForm() {
+    // DEFINE ALL STATE HERE
     const router = useRouter()
+    // DEFINE ALL THE FUNCTIONS HERE
     const handleSignIn = () => {
         // TODO: Implement sign-in logic
         console.log("Signing in...")
         router.push("/dashboard")
     }
+
+    // DEFINE MAIN FUNCTION RETURN STATEMENTS HERE
     return (
         <Card className="mx-auto w-full max-w-sm border-none">
             <CardHeader>
