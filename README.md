@@ -1,3 +1,13 @@
+This is live link - https://full-stack-tools-dev.vercel.app/
+
+in this Project Template 
+
+login page and signup page ready 
+
+and dashboard layout is ready 
+
+only need to start clone and start working 
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
