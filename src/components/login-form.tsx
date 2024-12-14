@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
@@ -10,8 +11,15 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { useRouter } from "next/navigation"
 
 export function LoginForm() {
+  const router=useRouter()
+  const handleLogin = () => {
+    // TODO: Implement sign-in logic
+    console.log("Signing in...")
+    router.push("/dashboard")
+}
   return (
     <Card className="mx-auto w-full max-w-sm border-none">
       <CardHeader>
@@ -40,10 +48,10 @@ export function LoginForm() {
             </div>
             <Input id="password" type="password" required />
           </div>
-          <Button type="submit" className="w-full">
+          <Button type="submit" className="w-full" onClick={handleLogin}>
             Login
           </Button>
-          <Button variant="outline" className="w-full">
+          <Button variant="outline" className="w-full" onClick={handleLogin}>
             Login with Google
           </Button>
         </div>

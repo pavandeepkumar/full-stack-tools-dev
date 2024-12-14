@@ -57,7 +57,7 @@ export function SignInForm() {
                     <Button type="submit" className="w-full" onClick={handleSignIn}>
                         Sign In
                     </Button>
-                    <Button variant="outline" className="w-full">
+                    <Button variant="outline" className="w-full" onClick={handleSignIn}>
                         Sign In with Google
                     </Button>
                 </div>
