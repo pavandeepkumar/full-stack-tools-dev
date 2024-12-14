@@ -1,7 +1,7 @@
 // services/api.ts
 import { API_ENDPOINT } from "@/constants";
 import axios, { AxiosError, AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from "axios";
-import { getAccessToken } from "./getAccessToken";
+
 
 const instance: AxiosInstance = axios.create({
   baseURL: API_ENDPOINT,
@@ -13,10 +13,10 @@ const instance: AxiosInstance = axios.create({
 // Interceptor to add Authorization token to each request
 instance.interceptors.request.use(
   async (config: InternalAxiosRequestConfig): Promise<InternalAxiosRequestConfig> => {
-    const session = await getAccessToken();
-    if (session && config.headers) {
-      config.headers.Authorization = `Bearer ${session.name}`;
-    }
+    // const session = await getAccessToken();
+    // if (session && config.headers) {
+    //   config.headers.Authorization = `Bearer ${session.name}`;
+    // }
     return config;
   }, (error: AxiosError) => {
     return Promise.reject(error);
